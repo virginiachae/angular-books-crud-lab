@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class='row'>
+								<div class="col-md-3 col-xs-12 thumbnail">
+									<img src="{{bookCtrl.oneBook.image}}" alt="album image">
+									<input ng-show="editing" ng-model="editedBook.image" type="text" class="form-control input-md" value="{{editedBook.image}}">
+								</div>
+
+								<div class="col-md-9 col-xs-12">
+									<ul class="list-group form-inline">
+										<li class="list-group-item">
+											<h4 class='inline-header'>Book Title</h4>
+											<span ng-hide="editing">{{bookCtrl.oneBook.title}}</span>
+											<input ng-show="editing" ng-model="bookCtrl.oneBook.title" type="text" class="form-control input-md" value="{{editedBook.title}}">
+										</li>
+
+										<li class="list-group-item">
+											<h4 class='inline-header'>Author Name:</h4>
+											<span ng-hide="editing">{{bookCtrl.oneBook.author}}</span>
+											<input ng-show="editing" ng-model="bookCtrl.oneBook.author" type="text" class="form-control input-md" value="{{editedBook.author}}">
+										</li>
+
+										<li class="list-group-item">
+											<h4 class='inline-header'>Released date:</h4>
+											<span ng-hide="editing">{{bookCtrl.oneBook.releaseDate}}</span>
+											<input ng-show="editing" ng-model="bookCtrl.oneBook.releaseDate" type="text" class="form-control input-md" value="{editedBook.releaseDate}">
+										</li>
+
+									</ul>
+								</div>
+								<div class='panel-footer'>
+									<div class='row'>
+										<button class='btn btn-danger' ng-click="bookCtrl.deleteBook(bookCtrl.oneBook)">Delete Book</button>
+										<button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book</button>
+										<button class='btn btn-success' ng-show="editing" ng-click="bookCtrl.editBook(bookCtrl.oneBook); editing = false">Save Changes</button>
+										<button class='btn btn-warning' ng-show="editing" ng-click="bookCtrl.cancelEdit()">Cancel Changes</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
