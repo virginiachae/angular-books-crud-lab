@@ -8,7 +8,7 @@
 							<div class='row'>
 								<div class="col-md-3 col-xs-12 thumbnail">
 									<img src="{{bookCtrl.oneBook.image}}" alt="album image">
-									<input ng-show="editing" ng-model="editedBook.image" type="text" class="form-control input-md" value="{{editedBook.image}}">
+									<input ng-show="editing" ng-model="bookCtrl.oneBook.image" type="text" class="form-control input-md">
 								</div>
 
 								<div class="col-md-9 col-xs-12">
@@ -16,19 +16,19 @@
 										<li class="list-group-item">
 											<h4 class='inline-header'>Book Title</h4>
 											<span ng-hide="editing">{{bookCtrl.oneBook.title}}</span>
-											<input ng-show="editing" ng-model="bookCtrl.oneBook.title" type="text" class="form-control input-md" value="{{editedBook.title}}">
+											<input ng-show="editing" ng-model="bookCtrl.oneBook.title" type="text" class="form-control input-md">
 										</li>
 
 										<li class="list-group-item">
 											<h4 class='inline-header'>Author Name:</h4>
 											<span ng-hide="editing">{{bookCtrl.oneBook.author}}</span>
-											<input ng-show="editing" ng-model="bookCtrl.oneBook.author" type="text" class="form-control input-md" value="{{editedBook.author}}">
+											<input ng-show="editing" ng-model="bookCtrl.oneBook.author" type="text" class="form-control input-md">
 										</li>
 
 										<li class="list-group-item">
 											<h4 class='inline-header'>Released date:</h4>
 											<span ng-hide="editing">{{bookCtrl.oneBook.releaseDate}}</span>
-											<input ng-show="editing" ng-model="bookCtrl.oneBook.releaseDate" type="text" class="form-control input-md" value="{editedBook.releaseDate}">
+											<input ng-show="editing" ng-model="bookCtrl.oneBook.releaseDate" type="text" class="form-control input-md">
 										</li>
 
 									</ul>
